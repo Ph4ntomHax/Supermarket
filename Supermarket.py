@@ -25,6 +25,7 @@ elif forma == 2:
 elif forma == 3:
     parcelas = compra / 2
     print(f"O valor final será 2 parcelas de {(compra / 2):.2f}R$")
+    print(f"O valor total é {compra}")
 
 elif forma == 4:
     parcelas = int(input("Quantidade de parcelas: "))
@@ -38,21 +39,21 @@ elif forma == 4:
         print(f"O preço total será de {total:.2f}R$ devido a juros")
 
 print()
+if forma == 3 or forma == 4:
+    confirmar = int(input("Caso queira confirmar digite 0 caso contrario digite enter: "))
 
-confirmar = int(input("Caso queira confirmar digite 0 caso contrario digite enter: "))
+    print()
 
-print()
-
-if confirmar == 0:
-    while True:
-        senha = int(input("Digite a senha do cartão: "))
-        if senha > 999 and senha < 10000:
-            print()
-            print("Compra finalizada, Obrigado pela preferencia")
-            print()
-            break
-        else:
-            print("Tente novamente!")
-            print()
-else:
-    exit()
+    if confirmar == 0:
+        while True:
+            senha = int(input("Digite a senha do cartão: "))
+            if senha > 999 and senha < 10000:
+                print()
+                print("Compra finalizada, Obrigado pela preferencia")
+                print()
+                break
+            else:
+                print("Tente novamente!")
+                print()
+    else:
+        exit()
